@@ -41,32 +41,38 @@ const team = [
   user = {
     name: 'Wayne',
     surname: 'Barnett',
-    role: 'Founder & CEO'
+    role: 'Founder & CEO',
+    image: 'wayne-barnett-founder-ceo.jpg'
   },
   user1 = {
     name: 'Angela',
     surname: 'Caroll',
-    role: 'Chief Editor'
+    role: 'Chief Editor',
+    image: 'angela-caroll-chief-editor.jpg'
   },
   user2 = {
     name: 'Walter',
     surname: 'Gordon',
-    role: 'Office Manager'
+    role: 'Office Manager',
+    image: 'walter-gordon-office-manager.jpg'
   },
   user3 = {
     name: 'Angela',
     surname: 'Lopez',
-    role: 'Social Media Manager'
+    role: 'Social Media Manager',
+    image: 'angela-lopez-social-media-manager.jpg'
   },
   user4 = {
     name: 'Scott',
     surname: 'Estrada',
-    role: 'Developer'
+    role: 'Developer',
+    image: 'scott-estrada-developer.jpg'
   },
   user5 = {
     name: 'Barbara',
     surname: 'Ramos',
-    role: 'Graphic Designer'
+    role: 'Graphic Designer',
+    image: 'barbara-ramos-graphic-designer.jpg'
   }
 ];
 console.log(team);
