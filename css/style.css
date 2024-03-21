@@ -1,0 +1,15 @@
+main{
+    background-color: #393A41;
+}
+.bg-card{
+    background-color: #A29470;
+}
+
+#members{
+    display: flex;
+    flex-wrap: wrap;
+}
+#members div{
+    width: calc(100% / 3 - 20px );
+    margin: 10px;
+}
