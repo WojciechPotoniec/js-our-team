@@ -76,3 +76,14 @@ const team = [
   }
 ];
 console.log(team);
+
+const ulEl = document.querySelector('ul');
+console.log(ulEl);
+
+for (let value of team) {
+  const liEl = document.createElement('li');
+  console.log(liEl);
+  
+  liEl.innerHTML = `${value.image}<br> TeamMember:<br> ${value.name} ${value.surname}<br> ${value.role}<br>`;
+  ulEl.appendChild(liEl);
+};
