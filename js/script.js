@@ -38,37 +38,37 @@ Barbara Ramos	Graphic Designer	         barbara-ramos-graphic-designer.jpg
 //Creo un array di object 
 
 const team = [
-  user = {
+  {
     name: 'Wayne',
     surname: 'Barnett',
     role: 'Founder & CEO',
     image: 'wayne-barnett-founder-ceo.jpg'
   },
-  user1 = {
+  {
     name: 'Angela',
     surname: 'Caroll',
     role: 'Chief Editor',
     image: 'angela-caroll-chief-editor.jpg'
   },
-  user2 = {
+  {
     name: 'Walter',
     surname: 'Gordon',
     role: 'Office Manager',
     image: 'walter-gordon-office-manager.jpg'
   },
-  user3 = {
+  {
     name: 'Angela',
     surname: 'Lopez',
     role: 'Social Media Manager',
     image: 'angela-lopez-social-media-manager.jpg'
   },
-  user4 = {
+  {
     name: 'Scott',
     surname: 'Estrada',
     role: 'Developer',
     image: 'scott-estrada-developer.jpg'
   },
-  user5 = {
+  {
     name: 'Barbara',
     surname: 'Ramos',
     role: 'Graphic Designer',
@@ -77,13 +77,47 @@ const team = [
 ];
 console.log(team);
 
-const ulEl = document.querySelector('ul');
+const ulEl = document.querySelector('div');
 console.log(ulEl);
 
 for (let value of team) {
-  const liEl = document.createElement('li');
+  const liEl = document.createElement('div');
   console.log(liEl);
-  
-  liEl.innerHTML = `${value.image}<br> TeamMember:<br> ${value.name} ${value.surname}<br> ${value.role}<br>`;
+  liEl.classList.add('card', 'bg-card', 'rounded-top-4');
+  liEl.innerHTML = `<img class="img-fluid rounded-4" src="img/${value.image}">
+  <h4 class="text-center">${value.name} ${value.surname}</h4>
+  <h5 class="text-center">${value.role}</h5>`;
   ulEl.appendChild(liEl);
+};
+
+const Submitbtn = document.querySelector('.btn.btn-primary');
+console.log(Submitbtn);
+
+Submitbtn.addEventListener('click', (e)=>{
+  e.preventDefault();
+  addNewMember();
+});
+
+function addNewMember(){
+  const nameValue = document.getElementById('name').value;
+  const surnameValue = document.getElementById('surname').value;
+  const roleValue = document.getElementById('role').value;
+  
+  const newMemeber = {
+    name: nameValue,
+    surname: surnameValue,
+    role: roleValue,
+    image: 'avatar_1.jpg'
+  };
+  team.push(newMemeber);
+  const newliEl = document.createElement('div');
+  console.log(newliEl);
+  newliEl.classList.add('card', 'bg-card', 'rounded-top-4');
+  
+  newliEl.innerHTML = `
+  <img class="img-fluid rounded-4" src="img/${newMemeber.image}">
+  <h4 class="text-center">${newMemeber.name} ${newMemeber.surname}</h4>
+  <h5 class="text-center">${newMemeber.role}</h5>
+  `;
+  ulEl.appendChild(newliEl);
 };
