@@ -103,21 +103,21 @@ function addNewMember(){
   const surnameValue = document.getElementById('surname').value;
   const roleValue = document.getElementById('role').value;
   
-  const newMemeber = {
+  const newMember = {
     name: nameValue,
     surname: surnameValue,
     role: roleValue,
     image: 'avatar_1.jpg'
   };
-  team.push(newMemeber);
+  team.push(newMember);
   const newliEl = document.createElement('div');
   console.log(newliEl);
   newliEl.classList.add('card', 'bg-card', 'rounded-top-4');
   
   newliEl.innerHTML = `
-  <img class="img-fluid rounded-4" src="img/${newMemeber.image}">
-  <h4 class="text-center">${newMemeber.name} ${newMemeber.surname}</h4>
-  <h5 class="text-center">${newMemeber.role}</h5>
+  <img class="img-fluid rounded-4" src="img/${newMember.image}">
+  <h4 class="text-center">${newMember.name} ${newMember.surname}</h4>
+  <h5 class="text-center">${newMember.role}</h5>
   `;
   ulEl.appendChild(newliEl);
 };
